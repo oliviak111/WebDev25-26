@@ -31,6 +31,7 @@ let pi = 3.1415926;
 function cirArea(){
       let radius = parseFloat(document.getElementById("r").value);
       let op = document.getElementById("output");
+      let pi = 3.1415926;
       let CA = pi * radius ** 2;
       op.innerHTML = CA;
 }
