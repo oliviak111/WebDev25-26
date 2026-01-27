@@ -27,6 +27,6 @@ function i(){
      let t = parseFloat(document.getElementById("t").value);
 
      let op2 = document.getElementById("output2");
-     let interest = Math.pow(P*(1+(r / n)),(n*t));
-     op2.innerHTML = `The Compound Interest of ${P}, ${r}, ${n}, ${t} is ${interest}`;
+     let Amount = P*Math.pow((1+(r / n)),(n*t));
+     op2.innerHTML = `The Compound Interest of ${P}, ${r}, ${n}, ${t} is ${Amount}`;
 }
