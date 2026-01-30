@@ -17,5 +17,5 @@ function cylinder(){
  // v = v.toFixed(2);
 
   /* Challenge 8: Are there any errors in displaying the output? (no ending `) */
-  output.innerHTML = `Volume of the cylinder is ${v.toFixed(4)}`;
+  output.innerHTML = `Volume of the cylinder is ${v.toFixed(2)}`;
 }
