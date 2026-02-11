@@ -13,4 +13,22 @@ Guideline:
 
 Use past examples, classwork and practicals to assist you in completing this practical.
 */
+function b(){
+       let m = parseFloat(document.getElementById("ib").value);
+       let h = parseFloat(document.getElementById("inch").value);
+       let BMI = 703 * (m/(h**2));
+       let op = document.getElementById("output");
+       let msg = "";
+
+       if(BMI < 18.5){
+              msg = "Underweight";
+       }else if(BMI >= 18.5 && BMI <= 24.9){
+              msg = "Healthy Weight";
+       }else if(BMI >= 25 && BMI <= 29.9){
+              msg = "Overweight";
+       }else if(BMI >= 30){
+              msg = "Obesity";
+       }
+       op.innerHTML = `The BMI of ${m} and ${h} is ${BMI.toFixed(2)} which is ${msg}`
+}
 
