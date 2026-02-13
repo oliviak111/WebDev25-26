@@ -19,16 +19,21 @@ function b(){
        let BMI = 703 * (m/(h**2));
        let op = document.getElementById("output");
        let msg = "";
+       let img ="";
 
        if(BMI < 18.5){
               msg = "Underweight";
+              img ="underweight.png";
        }else if(BMI >= 18.5 && BMI <= 24.9){
               msg = "Healthy Weight";
        }else if(BMI >= 25 && BMI <= 29.9){
               msg = "Overweight";
+              img ="overweight.png";
        }else if(BMI >= 30){
               msg = "Obesity";
+              img ="obeseweight.png";
        }
-       op.innerHTML = `The BMI of ${m} and ${h} is ${BMI.toFixed(2)} which is ${msg}`
+       op.innerHTML = `The BMI of ${m} and ${h} is ${BMI.toFixed(2)} which is ${msg} <img src="${img}">`;
+       
 }
 
