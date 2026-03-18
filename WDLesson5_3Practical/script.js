@@ -11,9 +11,28 @@
 */
 
 function balance(){
+        let output = document.getElementById("output");        
+        let r = parseFloat(document.getElementById("r").value);
+        let p = parseInt(document.getElementById("p").value);
+        let years = parseInt(document.getElementById("t").value);
+        let build = "";
+        build += `<table>
+                        <tr>  <th>Year</th> <th>Balance</th> </tr>`;
+
+        for(let t = 0; t<=years; t++){
+            let a = p* Math.pow(1+(r/100), t);
+            build += `<tr>
+                                <td>${t}</td>
+                                <td>$${a.toFixed(2)}</td>
+                      </tr>`;
+        }
+        build += "</table>";
+
+        output.innerHTML = build;
+        
+        }
 
 
-}
 
 /* Challenge Bonus: Allow the user to enter n.  This will require you to modify,
         1) Retrieve the value of n from the user.
@@ -24,3 +43,4 @@ function balance(){
               c. n = 3 then the interest is compounded quarterly
               d. n = 2 then the interest is compounded bi-yearly
 */ 
+
