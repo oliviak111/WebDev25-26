@@ -9,11 +9,11 @@ async function init(){
   let build = "";
 
   for(let i = 0; i < data.length; i+=1){
-    let issue = data[i];
+    let issue = data[i]; 
     build += `<div class="fitted card">
-                 <h3>Street: ${issue.on_street_name}</h3>
+                 <h3>ID: ${issue.collision_id}</h3>
                  <hr>
-                 <p>ID: ${issue.collision_id}</p>
+                 <p>Street: ${issue.on_street_name}</p>
                  <p>Vehicle: ${issue.vehicle_type_code1}</p>
                  <p>Crash Time: ${issue.crash_time}</p>
                  <hr>
@@ -38,9 +38,9 @@ function filterBystreet(){
     let issue = data[i];
     if(issue.on_street_name == streets){
       build += `<div class="fitted card">
-                    <h3>Street: ${issue.on_street_name}</h3>
+                    <h3>ID: ${issue.collision_id}</h3>
                     <hr>
-                    <p>ID: ${issue.collision_id}</p>
+                    <p>Street: ${issue.on_street_name}</p>
                     <p>Vehicle: ${issue.vehicle_type_code1}</p>
                     <p>Crash Time: ${issue.crash_time}</p>
                     <hr>
@@ -68,9 +68,9 @@ function filterByvehicle(){
     let issue = data[i];
     if(issue.vehicle_type_code1 == vehicle){
       build += `<div class="fitted card">
-                    <h3>Street: ${issue.on_street_name}</h3>
+                    <h3>ID: ${issue.collision_id}</h3>
                     <hr>
-                    <p>ID: ${issue.collision_id}</p>
+                    <p>Street: ${issue.on_street_name}</p>
                     <p>Vehicle: ${issue.vehicle_type_code1}</p>
                     <p>Crash Time: ${issue.crash_time}</p>
                     <hr>
